@@ -12,10 +12,10 @@ jobs:
       id-token: write
       contents: read
     steps:
-      - uses: aws-actions/configure-aws-credentials@v1
+      - uses: aws-actions/configure-aws-credentials@v6.1.0
         with:
-          aws-region: 'us-east-1' # リージョンを指定
-          role-to-assume: 'arn:aws:iam::<AWSアカウントID>:role/<IAMロール名>' # 作成した IAM ロールの ARN
+          aws-region: ap-northeast-1 # リージョンを指定
+          role-to-assume: ${{ secrets.ASSUME_ROLE_ARN }} # 作成した IAM ロールの ARN
 
       # プライベートな S3 バケットを読み取ってみる
       - run: aws s3 ls 
