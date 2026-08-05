@@ -1,4 +1,4 @@
-name: Test Assume Role
+name: Test a Assume Role
 
 on:
   push:
