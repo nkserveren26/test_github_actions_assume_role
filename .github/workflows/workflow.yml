@@ -16,6 +16,8 @@ jobs:
         with:
           aws-region: ap-northeast-1 # リージョンを指定
           role-to-assume: ${{ secrets.ASSUME_ROLE_ARN }} # 作成した IAM ロールの ARN
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       # プライベートな S3 バケットを読み取ってみる
       - run: aws s3 ls 
