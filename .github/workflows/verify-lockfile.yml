@@ -5,9 +5,7 @@ name: verify-lockfile
 
 on:
   pull_request:
-  push:
-    branches:
-      - main
+  
 
 permissions:
   contents: read
